@@ -4,6 +4,7 @@
 #include <wait.h>
 
 char command[1024]={0};
+
 int do_face(){
     memset(command,0x00,1024);
     printf("[dumenglin'shell by heself]$");
