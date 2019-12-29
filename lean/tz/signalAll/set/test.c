@@ -5,7 +5,7 @@
 #include <signal.h>
 #include <unistd.h>
 int main(){
-    signal()
+    
     //阻塞------------------------------------------
     sigset_t set,oldset;
     //int sigemptyst(sigset_t *set);
