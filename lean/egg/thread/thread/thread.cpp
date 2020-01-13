@@ -4,6 +4,7 @@
 using namespace std;
 
 void* thrread_try(void* arg){
+    (void)arg;
     while(1){
         cout<<"thread : -----"<<endl;
         sleep(1);
