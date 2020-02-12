@@ -23,7 +23,6 @@ class BlockQueue{
         void UnLockQueue(){
             SignalProtect();
             pthread_mutex_unlock(&lock);
-
         }
         void ProtectWait(){
             SignalConsume();
@@ -57,19 +56,20 @@ class BlockQueue{
         }
 
         void PushData(const int data){
+            //生产数据
            LockQueue(); 
            while(IsFull()){
                ProtectWait();
            }
            if(IsHightWaterLine()){
                SignalConsume();
-               sleep(1);
            }
            bq.push(data);
            UnLockQueue();
         }
 
         void PopData(int & data){
+            //消费数据
            LockQueue(); 
            while(IsEmpty()){
                ConsumeWait();

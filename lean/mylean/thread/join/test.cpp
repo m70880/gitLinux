@@ -13,10 +13,11 @@ void* thread_begin(void* arg){
 }
 int main(){
     pthread_t tid=0;
-    pthread_create(&tid,NULL,thread_begin,NULL);
+    //pthread_create(&tid,NULL,thread_begin,NULL);
     cout<<"i am a man "<<endl;
     void * ret;
-    pthread_join(tid,&ret);
-    cout<<"thread had quit ,code is :"<<(int)ret<<endl;
+    int ll = pthread_join(tid,&ret);
+    cout<<"thread had quit ,code is :"<<ll<<endl;
+    //cout<<"thread had quit ,code is :"<<(int)ret<<endl;
     return 0;
 }

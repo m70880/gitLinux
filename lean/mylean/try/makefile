@@ -1,2 +1,2 @@
-out:test.c
-	gcc test.c -o out
+out:test.cpp
+	g++ $^ -o $@ -g

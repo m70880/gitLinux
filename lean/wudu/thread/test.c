@@ -3,11 +3,12 @@
 #include <pthread.h>
 
 using namespace std;
-void* thread_name(){
+pthread_mutex_t lock;
 
-    return nullptr;
-}
 int main(){
+    //初始化
+    pthread_mutex_init(&lock,NULL);
+    
     
     return 0;
 }

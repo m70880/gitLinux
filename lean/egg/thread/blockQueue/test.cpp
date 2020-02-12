@@ -19,7 +19,7 @@ void* protect_rotinue(void* arg){
         int data =rand()%100 + 1;
         bqp->PushData(data);
         cout<<"protect done ,data is: " << data << endl;
-        usleep(100000);
+        usleep(100 * 1000);
     }
     return NULL;
 }

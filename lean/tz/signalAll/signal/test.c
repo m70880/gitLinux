@@ -7,7 +7,6 @@ struct sigaction act,old;
 
 void sigcb(int signo){
     printf("\nrecv :%d\n",signo);
-
     sigaction(SIGINT,&old,NULL);
 }
 int main(){
